@@ -1,0 +1,37 @@
+{
+  "name": "@erdalkulgu/erdalkulgu-library-submission",
+  "version": "1.0.0",
+  "description": "This is Themed Component Library for Fractal EMS",
+  "main": "dist/cjs/index.js", 
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist/ && prettier --write src/ && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "material-ui"
+  ],
+  "author": "Erdal Kulgu",
+  "license": "MIT",
+  "devDependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@types/material-ui": "^0.21.12",
+    "@types/node": "^18.16.2",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
